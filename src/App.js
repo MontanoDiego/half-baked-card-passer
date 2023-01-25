@@ -10,16 +10,13 @@ function App() {
   const { playerOneHand, 
     playerTwoHand, 
     playerThreeHand, 
-    passCard } = useContext(GameContext);
-
-  const [deck, setDeck] = useState(initialCards);
+    passCard,
+    deck } = useContext(GameContext);
+    
   const [selectedCard, setSelectedCard] = useState();
   const [from, setFrom] = useState('deck');
   const [to, setTo] = useState(1);
 
-  function findCardIndex(value, suit, cards) {
-    return cards.findIndex((card) => card.value === value && card.suit === suit);
-  }
 
   return (
     <div className="App">
@@ -39,9 +36,6 @@ function App() {
         />
         <CardList
           cards={deck}
-          selectedCard={selectedCard}
-          setSelectedCard={setSelectedCard}
-          setFrom={setFrom}
           player={'deck'}
         />
       </section>
