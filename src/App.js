@@ -10,12 +10,8 @@ function App() {
   const { playerOneHand, 
     playerTwoHand, 
     playerThreeHand, 
-    passCard,
+    selectedCard,
     deck } = useContext(GameContext);
-    
-  const [selectedCard, setSelectedCard] = useState();
-  const [from, setFrom] = useState('deck');
-  const [to, setTo] = useState(1);
 
 
   return (
@@ -42,12 +38,6 @@ function App() {
       <section>
         {selectedCard && (
           <ExecutePassButton
-            passCard={passCard}
-            setFrom={setFrom}
-            from={from}
-            to={to}
-            selectedCard={selectedCard}
-            setSelectedCard={setSelectedCard}
           />
         )}
       </section>
