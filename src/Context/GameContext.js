@@ -50,6 +50,7 @@ const GameProvider = ({ children }) => {
     to, setTo,
     findCardIndex,
     passCard
+
   }}>{children}</GameContext.Provider>;
 };
 

@@ -10,12 +10,15 @@ export default function ExecutePassButton() {
     from,
     to,
     selectedCard,
-    setSelectedCard,
   } = useContext(GameContext);
 
   return (
     <div className="execute-button" onClick={() => passCard(selectedCard)}>
-      Pass <Card card={selectedCard} setSelectedCard={setSelectedCard} setFrom={setFrom} /> from{' '}
+      Pass <Card 
+        card={selectedCard} 
+        setFrom={setFrom} 
+      /> 
+        from{' '}
       {from} to {to}
     </div>
   );
